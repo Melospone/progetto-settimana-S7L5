@@ -14,9 +14,9 @@ window.onload = function () {
             card.innerHTML = "";
 
             data.forEach((product) => {
-                card.innerHTML += `<div class= "col">
-            <div class = "card h-100 w-100 border-2 border-black">
-            <img src="${product.imageUrl}" class="card-img-top h-100 w-100" alt=""/>
+                card.innerHTML += `<div class= "col-3 g-3">
+            <div class = "card h-100 w-80 border-4 border-black">
+            <img src="${product.imageUrl}" class="card-img-top h-100 w-150" alt=""/>
             <div class = "card-body">
             <h5 class = "card-title">${product.name}</h5>
             <p class = "card-text">${product.description}</p>
@@ -29,9 +29,7 @@ window.onload = function () {
         })
 }
 
-
 /* chiamata per aggiungere un nuovo prodotto */
-
 async function addProduct() {
     const objName = document.getElementById("productName").value;
     const objDescription = document.getElementById("productDescription").value;
@@ -58,7 +56,7 @@ async function addProduct() {
         let data = await response.json();
         console.log(data);
 
-        // Effettua una nuova richiesta per ottenere l'elenco aggiornato dei prodotti
+        
         fetch(url, { headers })
             .then((response) => response.json())
             .then((data) => {
@@ -79,7 +77,7 @@ async function addProduct() {
                 });
             });
 
-        // Reindirizza all'index.html
+        
         window.location.href = "./index.html";
     } catch (error) {
         console.error(error);
@@ -94,3 +92,11 @@ function resetForm() {
     document.getElementById("productBrand").value = "";
     document.getElementById("imgPro").value = "";
 }
+
+
+
+
+
+
+
+
