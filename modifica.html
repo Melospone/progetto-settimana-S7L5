@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modifica</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar bg-body-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="./img/logo-amazon-01.png" alt="Logo" width="150" height="50" class="d-inline-block align-text-top">
+          </a>
+          <a class="btn btn-dark" href="/add.html" role="button">Link</a>
+        </div>
+      </nav>
+
+<h1>pagina modifica</h1>
+
+<div class="container mt-5">
+    <h1 class="mb-4">AGGIUNGI Prodotto</h1>
+
+    <!-- Form per la modifica del prodotto -->
+    <form id="editProductForm">
+        <div class="form-group">
+            <label for="productName">Nome del Prodotto:</label>
+            <input type="text" class="form-control" id="productName" name="productName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="productDescription">Descrizione del Prodotto:</label>
+            <textarea class="form-control" id="productDescription" name="productDescription" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="productDescription">Prezzo del Prodotto:</label>
+            <textarea class="form-control" id="productPrice" name="productDescription" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="productDescription">Brand del Prodotto:</label>
+            <textarea class="form-control" id="productBrand" name="productDescription" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="productDescription">img del Prodotto:</label>
+            <textarea class="form-control" id="imgPro" name="productDescription" required></textarea>
+        </div>
+
+        <button type="button" class="btn btn-primary">Salva Modifiche</button>
+    </form>
+</div>
+
+
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
