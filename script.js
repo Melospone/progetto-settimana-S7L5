@@ -15,8 +15,8 @@ window.onload = function () {
 
             data.forEach((product) => {
                 card.innerHTML += `<div class= "col">
-            <div class = "card">
-            <img src="${product.imageUrl}" class="card-img-top" alt=""/>
+            <div class = "card h-100 w-100">
+            <img src="${product.imageUrl}" class="card-img-top h-100 w-100" alt=""/>
             <div class = "card-body">
             <h5 class = "card-title">${product.name}</h5>
             <p class = "card-text">${product.description}</p>
@@ -28,48 +28,6 @@ window.onload = function () {
             })
         })
 }
-
-/* function updateProduct(_id) {
-    const updatedName = prompt("Inserisci il nuovo nome del prodotto:");
-    const updatedDescription = prompt("Inserisci la nuova descrizione del prodotto:");
-
-    if (updatedName && updatedDescription) {
-        // Esegui una richiesta PUT al tuo backend per aggiornare il prodotto con l'ID specificato
-        fetch(`${url}/${_id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: headers.Authorization,
-            },
-            body: JSON.stringify({
-                name: updatedName,
-                description: updatedDescription,
-                // Aggiungi altri campi del prodotto se necessario
-            }),
-        })
-        .then((response) => response.json())
-        .then((updatedProduct) => {
-            console.log('Prodotto aggiornato:', updatedProduct);
-        
-            // Aggiorna l'elemento card sulla pagina con i nuovi dati
-            const cardToUpdate = document.querySelector(`[data-product-id="${_id}"]`);
-            if (cardToUpdate) {
-                const cardTitle = cardToUpdate.querySelector('.card-title');
-                const cardDescription = cardToUpdate.querySelector('.card-text');
-        
-                if (cardTitle && cardDescription) {
-                    cardTitle.textContent = updatedProduct.name;
-                    cardDescription.textContent = updatedProduct.description;
-                }
-            }
-        })
-        .catch((error) => {
-            console.error('Errore durante l\'aggiornamento del prodotto:', error);
-        });
-    } else {
-        alert("Nome e descrizione sono obbligatori.");
-    }
-} */
 
 
 /* chiamata per aggiungere un nuovo prodotto */
@@ -108,21 +66,20 @@ async function addProduct() {
                 card.innerHTML = "";
 
                 data.forEach((product) => {
-                card.innerHTML += `<div class= "col">
-            <div class = "card">
-            <img src="${product.imageUrl}" class="card-img-top" alt=""/>
-            <div class = "card-body">
-            <h5 class = "card-title">${product.name}</h5>
-            <p class = "card-text">${product.description}</p>
-            <a class="btn btn-warning me-2 mb-1" href="./modifica.html" id="${product._id}">Modifica</a>
-            <a class = "btn btn-info" href="detail.html? id=${product._id}">Scopri di più</a>
+                card.innerHTML +=     `<div class="card h-100 w-100">
+                <img src="${product.imageUrl}" class="card-img-top object-fit-cover h-100 w-100" alt=""/>
+                <div class="card-body">
+                    <h5 class="card-title">${product.name}</h5>
+                    <p class="card-text">${product.description}</p>
+                    <a class="btn btn-warning me-2 mb-1" href="./modifica.html" id="${product._id}">Modifica</a>
+                    <a class="btn btn-info" href="detail.html?id=${product._id}">Scopri di più</a>
+                </div>
             </div>
-            </div>
-            </div>`
+        </div>`
                 });
             });
 
-        // Reindirizza all'index.html o dove desideri
+        // Reindirizza all'index.html
         window.location.href = "./index.html";
     } catch (error) {
         console.error(error);
