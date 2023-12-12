@@ -9,46 +9,47 @@
 <body>
     <nav class="navbar bg-dark" style="margin-bottom: 20px;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="./img/logo-amazon-01.png" alt="Logo" width="150" height="50" class="d-inline-block align-text-top" style="border-radius: 10px;">
+          <a class="navbar-brand" href="./index.html">
+            <img src="./img/logo-amazon-01.png" alt="Logo" width="150" height="50" class="d-inline-block align-text-top" style="border-radius: 45px;">
           </a>
-          <a class="btn btn-dark" href="/add.html" role="button">Link</a>
+          <a class="btn  bg-white" href="/add.html" role="button">Link</a>
         </div>
       </nav>
 
-<h1>pagina modifica</h1>
+<h1 class="mb-4 text-center">pagina modifica</h1>
 
 <div class="container mt-5">
-    <h1 class="mb-4">AGGIUNGI Prodotto</h1>
+    <h1 class="mb-4 text-center">AGGIUNGI Prodotto</h1>
 
     <!-- Form per la modifica del prodotto -->
     <form id="editProductForm">
         <div class="form-group">
             <label for="productName">Nome del Prodotto:</label>
-            <input type="text" class="form-control" id="productName" name="productName" required>
+            <input type="text" class="form-control border-2 border-black" id="productName" name="productName" required>
         </div>
 
         <div class="form-group">
             <label for="productDescription">Descrizione del Prodotto:</label>
-            <textarea class="form-control" id="productDescription" name="productDescription" required></textarea>
+            <textarea class="form-control border-2 border-black" id="productDescription" name="productDescription" required></textarea>
         </div>
 
         <div class="form-group">
             <label for="productDescription">Prezzo del Prodotto:</label>
-            <textarea class="form-control" id="productPrice" name="productDescription" required></textarea>
+            <textarea class="form-control border-2 border-black" id="productPrice" name="productDescription" required></textarea>
         </div>
 
         <div class="form-group">
             <label for="productDescription">Brand del Prodotto:</label>
-            <textarea class="form-control" id="productBrand" name="productDescription" required></textarea>
+            <textarea class="form-control border-2 border-black" id="productBrand" name="productDescription" required></textarea>
         </div>
 
         <div class="form-group">
             <label for="productDescription">img del Prodotto:</label>
-            <textarea class="form-control" id="imgPro" name="productDescription" required></textarea>
+            <textarea class="form-control border-2 border-black" id="imgPro" name="productDescription" required></textarea>
         </div>
-
-        <button type="button" class="btn btn-primary">Salva Modifiche</button>
+        <div class="d-flex justify-content-end">
+        <button type="button" class="btn btn-primary m-4 ">Salva Modifiche</button>
+    </div>
     </form>
 </div>
 

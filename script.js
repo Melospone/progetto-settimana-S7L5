@@ -15,7 +15,7 @@ window.onload = function () {
 
             data.forEach((product) => {
                 card.innerHTML += `<div class= "col">
-            <div class = "card h-100 w-100">
+            <div class = "card h-100 w-100 border-2 border-black">
             <img src="${product.imageUrl}" class="card-img-top h-100 w-100" alt=""/>
             <div class = "card-body">
             <h5 class = "card-title">${product.name}</h5>
@@ -84,4 +84,13 @@ async function addProduct() {
     } catch (error) {
         console.error(error);
     }
+}
+
+
+function resetForm() {
+    document.getElementById("productName").value = "";
+    document.getElementById("productDescription").value = "";
+    document.getElementById("productPrice").value = "";
+    document.getElementById("productBrand").value = "";
+    document.getElementById("imgPro").value = "";
 }
