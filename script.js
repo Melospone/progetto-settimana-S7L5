@@ -93,6 +93,22 @@ function resetForm() {
     document.getElementById("imgPro").value = "";
 }
 
+function populateForm() {
+    fetch(url, {headers})
+    .then((response) => response.json())
+    .then((data) => {
+        data.forEach((element) => {
+            populateEditPage(element.name, element.brand, element.price, element.imageUrl, element.description);
+        })});
+    function populateEditPage(editName, editBrand, editPrice, editImage, editDescription) {
+        document.getElementById("productName").value = editName;
+        document.getElementById("productBrand").value = editBrand;
+        document.getElementById("productPrice").value = editPrice;
+        document.getElementById("imgPro").value = editImage;
+        document.getElementById("productDescription").value = editDescription;
+}
+}
+populateForm();
 
 
 
